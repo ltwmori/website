@@ -1,4 +1,3 @@
-const colors = require('tailwindcss/colors')
 module.exports = {
   content: ['./dist/**/*.html', './src/**/*.{js,jsx,ts,tsx}', './*.html'],
   plugins: [require('@tailwindcss/forms')],
