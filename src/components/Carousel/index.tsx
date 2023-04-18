@@ -1,5 +1,6 @@
 // Carousel.tsx
 import React, { useState } from 'react'
+import Arrow from '../../..//assets/icons8-arrow.png'
 
 interface CarouselProps {
   images: string[]
@@ -22,28 +23,18 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
 
   return (
     <div className="relative">
-      {/* {images.map((image, index) => (
-        <img
-          key={index}
-          src={image}
-          alt={`Carousel slide ${index + 1}`}
-          className={`absolute w-full h-full object-cover transition-opacity duration-300 ease-in-out ${
-            currentIndex === index ? 'opacity-100' : 'opacity-0'
-          }`}
-        />
-      ))} */}
       <img src={images[currentIndex]} alt="image description" />
       <button
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 text-black px-3 py-2 rounded-full focus:outline-none"
+        className="absolute left-0 bottom-0 transform -translate-y-1/2 bg-opacity-50px-3 py-2 rounded-full focus:outline-none"
         onClick={prevSlide}
       >
-        Prev
+        <img className="rotate-180" src={Arrow}></img>
       </button>
       <button
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 text-black px-3 py-2 rounded-full focus:outline-none"
+        className="absolute right-0 bottom-0 transform -translate-y-1/2 bg-opacity-50 px-3 py-2 rounded-full focus:outline-none"
         onClick={nextSlide}
       >
-        Next
+        <img src={Arrow}></img>
       </button>
     </div>
   )

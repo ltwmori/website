@@ -1,5 +1,7 @@
 import React from 'react'
 import Carousel from '../../components/Carousel'
+import Photo from '../../..//assets/photo.jpg'
+import ColorfulCirclesText from '../../components/TextWithCircles'
 
 const Education = () => {
   const images = [
@@ -7,13 +9,20 @@ const Education = () => {
     '../../../assets/infographic-2.png',
     '../../../assets/infographic-3.png'
   ]
+  const myText = 'Hello, world! Colorful Os are fun!'
   return (
     <div className="h-full font-nagelRegular tracking-widest">
       <section className="flex flex-row gap-x-8 justify-center">
-        <div>
-          <h2 className="flex justify-start align-center text-3xl text-center uppercase underline underline-offset-8 lg:text-4xl">
+        <div className="flex flex-col w-1/3">
+          <h2 className="flex justify-start align-center text-3xl mb-10 text-center uppercase underline underline-offset-8 lg:text-4xl">
             наша миссия.
           </h2>
+          <div className="justify-center text-3xl w-4/5 tracking-widest text-left uppercase">
+            <ColorfulCirclesText text="ПОСТРOИТЬ" color="#e2a0a3" /> МИР, В{' '}
+            <ColorfulCirclesText text="КОТОРOМ" color="#92adcf" /> БЫТЬ
+            СЧАСТЛИВЫМ — <ColorfulCirclesText text="ЭТO" color="#eccd9e" />{' '}
+            НОРМА.
+          </div>
         </div>
         <div className="">
           <img
@@ -63,6 +72,62 @@ const Education = () => {
         </div>
 
         <Carousel images={images} />
+      </section>
+      <section className="flex justify-center mt-20 flex-col">
+        <div className="flex flex-row mb-20">
+          <div className="flex flex-col justify-between items-start space-y-40">
+            <h2 className="flex justify-start align-center text-3xl text-center uppercase underline underline-offset-8 lg:text-4xl">
+              КАК МЫ ЭТО ДЕЛАЕМ?
+            </h2>
+            <h2 className="flex justify-start align-center text-8xl uppercase tracking-wide font-spileCompressed w-2/3">
+              КОМПЛЕКСНЫЙ ПОДХОД НА СТЫКЕ СОВРЕМЕННОЙ ПСИХОЛОГИИ, КОУЧИНГА И
+              БИЗНЕСА.
+            </h2>
+          </div>
+          <img src={Photo}></img>
+        </div>
+        <div className="flex flex-row justify-between  items-start">
+          <p className="text-sm w-2/3">
+            Всю свою жизнь я посвятила изучению Человека. Я изучала детскую и
+            взрослую психологию, прошла между- народные образовательные курсы
+            коучинга и профессиональной ориентации. Итогом моей работы стала
+            докторская диссертация по теме природного потенциала человека и
+            инновационного подхода к формирова- нию команд и развитию
+            сотрудников. Моя глобальная цель - создать рекрутинговое агентство,
+            основной цен- ностью которого будет не профессиональные достижения
+            человека, а его природный потенциал, желания, потребности и
+            стремления. Я верю, что только так мы можем построить счастливое
+            общество, где каждый человек будет находится на своем месте и с
+            удовольствием проживать свою жизнь.
+          </p>
+          <div className="flex flex-col  items-end">
+            <h2 className="flex justify-start align-left text-5xl uppercase font-spileCompressed ">
+              Балсулу Тасбулатова
+            </h2>
+            <h2 className="flex justify-start align-center text-base text-center uppercase ">
+              Основатель проекта
+            </h2>
+            <h2 className="flex justify-start text-[#2c23d7] align-center text-base text-center  ">
+              @balsulu.tasbulatova
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      <section className="flex justify-start mt-40 flex-col ">
+        <h2 className="text-9xl leading-10">“</h2>
+
+        <div className="text-5xl w-4/5 tracking-widest text-left uppercase">
+          <ColorfulCirclesText text="Самoе" color="#d7797e" /> большое счастье
+          для нас - видеть, как человек превращается в{' '}
+          <ColorfulCirclesText text="прекрасногo" color="#7571a9" /> лебедя,
+          раскрывает свои крылья, и с уверенностью в{' '}
+          <ColorfulCirclesText text="свoих" color="#556ea8" /> силах, начинает
+          путь к мечте.
+        </div>
+        <div className="flex justify-end align-center tracking-normal text-left text-2xl">
+          — Команда PINCODE
+        </div>
       </section>
     </div>
   )
