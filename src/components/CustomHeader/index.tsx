@@ -6,7 +6,7 @@ interface IProps {
 
 const CustomHeader: React.FC<IProps> = ({ title }) => {
   return (
-    <h2 className="font-nagelRegular text-4xl inline-block border-b-2 black">
+    <h2 className="font-nagelRegular text-4xl inline-block border-b-2 black uppercase ">
       {title}
     </h2>
   )
