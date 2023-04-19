@@ -9,7 +9,6 @@ import {
   Carousel
 } from '../../components'
 
-
 import { methods } from '../../consts/methods'
 import { consultants } from '../../consts/consultants'
 
@@ -20,7 +19,7 @@ const Home = () => {
   const handleClick = () => {
     console.log('Button clicked!')
   }
-   const images = [
+  const images = [
     '../../../assets/infographic-1.png',
     '../../../assets/infographic-2.png',
     '../../../assets/infographic-3.png'
@@ -101,10 +100,9 @@ const Home = () => {
         </div>
       </section>
 
-
-    <section>
-       <Carousel images={images} />
-    </section>
+      <section>
+        <Carousel images={images} />
+      </section>
 
       {/* methods */}
       <section className="mt-20">
@@ -154,6 +152,45 @@ const Home = () => {
               </div>
               <div className="flex justify-end align-center tracking-normal text-left text-2xl">
                 — Команда PINCODE
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ЧТО ДАЛО ЛЮДЯМ */}
+
+      <section className="mt-20 flex flex-col">
+        <div className="inline-block">
+          <CustomHeader title="ЧТО ЭТО ДАЛО ЛЮДЯМ" />
+        </div>
+
+        <div className="mt-12 md:mt-20">
+          <div className="flex flex-col md:flex-row justify-around">
+            <div className="self-center">
+              <img src="assets/cloud1.svg" alt="cloud-text" />
+            </div>
+
+            <div className="flex flex-col gap-8">
+              <div className="self-center">
+                <img src="assets/phone.png" alt="phone" className="w-[210px]" />
+              </div>
+              <div className="flex items-center justify-evenly">
+                <div>
+                  <img src="assets/leftArrow.png" alt="cloud-text" />
+                </div>
+                <div>
+                  <img src="assets/rightArrow.png" alt="cloud-text" />
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col  justify-around">
+              <div>
+                <img src="assets/cloud3.svg" alt="cloud-text" />
+              </div>
+              <div>
+                <img src="assets/cloud2.svg" alt="cloud-text" />
               </div>
             </div>
           </div>
@@ -236,7 +273,7 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className='flex justify-center mt-20 '>
+          <div className="flex justify-center mt-20 ">
             <div className="flex flex-row items-baseline justify-between w-10/12">
               <TransparentButton
                 text="ПЕРЕЙТИ К ОПЛАТЕ"
