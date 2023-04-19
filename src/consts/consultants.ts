@@ -13,7 +13,7 @@ interface IConsultant {
 
 export const consultants: IConsultant[] = [
   {
-    img_url: '../../assets/balsu.png',
+    img_url: Balsulu,
     heading: 'Балсулу Тасбулатова , PHD',
     link: '@balsulu.tasbulatova',
     superPower: 'СУПЕРСПОБНОСТЬ: LOREMEPSUM',

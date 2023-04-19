@@ -1,6 +1,6 @@
 // Carousel.tsx
 import React, { useState } from 'react'
-import Arrow from '../../..//assets/icons8-arrow.png'
+import Arrow from '../../../assets/icons8-arrow.png'
 
 interface CarouselProps {
   images: string[]

@@ -25,6 +25,7 @@ const Home = () => {
     '../../../assets/infographic-2.png',
     '../../../assets/infographic-3.png'
   ]
+
   return (
     <div className="h-full">
       {/* top section */}

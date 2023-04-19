@@ -16,10 +16,11 @@ const ConsultantCard: React.FC<IProps> = ({
   description
 }) => {
   return (
-    <div className="flex flex-row sm:w-full md:w-full lg:w-2/3 mb-2">
-      <div className="mr-5">
-        <img src={img_url} />
+    <div className="flex flex-row w-full mb-10">
+      <div className="mr-5 w-full">
+        <img src={img_url} alt={heading + ' img'} className="object-contain w-full h-full" />
       </div>
+
       <div>
         <h2 className="font-spileCompressed text-5xl tracking-wide mb-2">
           {heading}
