@@ -22,19 +22,19 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
   }
 
   return (
-    <div className="relative">
+    <div className="relative flex justify-center">
       <img src={images[currentIndex]} alt="image description" />
       <button
-        className="absolute left-0 bottom-0 transform -translate-y-1/2 bg-opacity-50px-3 py-2 rounded-full focus:outline-none"
+        className="absolute right-1/2 -bottom-12 transform -translate-y-1/2 bg-opacity-50px-3 py-2 rounded-full focus:outline-none"
         onClick={prevSlide}
       >
-        <img className="rotate-180" src={Arrow}></img>
+        <img className="rotate-180 opacity-0" src={Arrow}></img>
       </button>
       <button
-        className="absolute right-0 bottom-0 transform -translate-y-1/2 bg-opacity-50 px-3 py-2 rounded-full focus:outline-none"
+        className="absolute left-1/2 -bottom-12 transform -translate-y-1/2 bg-opacity-50 px-3 py-2 rounded-full focus:outline-none"
         onClick={nextSlide}
       >
-        <img src={Arrow}></img>
+        <img src={Arrow} className="opacity-0"></img>
       </button>
     </div>
   )
