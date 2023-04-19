@@ -37,23 +37,23 @@ const Home = () => {
         />
         <img className="mt-10" src={path}></img>
       </section>
-      <section className="px-28">
-        <div className="max-w-4xl sm:max-w-3xl lg:max-w-6xl mt-0 mb-0 ml-auto mr-auto">
-          <h2 className="flex justify-center align-center mt-20 mb-20  text-3xl text-center font-nagelRegular tracking-widest lg:text-4xl">
+      <section className="px-8 sm:px-10 md:px-24 lg:px-28">
+        <div className="max-w-lg sm:max-w-xl lg:max-w-6xl mt-0 mb-0 ml-auto mr-auto">
+          <h2 className="flex justify-center align-center mt-20 mb-20  text-xl text-center font-nagelRegular tracking-widest lg:text-4xl md:text-2xl sm:text-base">
             ВСПОМНИ, КЕМ ТЫ ХОТЕЛ СТАТЬ, ДО ТОГО, КАК НАУЧИЛСЯ БЫТЬ КЕМ-ТО
             ДРУГИМ.
           </h2>
         </div>
 
-        <div className="flex flex-row mt-14">
-          <div className="flex flex-col w-1/3 gap-2">
-            <p className="text-2xl tracking-wide">активируй свои</p>
+        <div className="flex flex-col mt-14 sm:flex-col md:flex-row lg:flex-row">
+          <div className="flex flex-col w-1/3 gap-2  ">
+            <p className="text-2xl tracking-wide sm:text-lg">активируй свои</p>
             <p className="text-6xl tracking-wide font-spileCompressed ">
               суперспособности
             </p>
             <div className="w-12 h-12 bg-black rounded-full mt-3"></div>
           </div>
-          <div className="flex flex-col w-2/3 gap-2">
+          <div className="flex flex-col w-2/3 gap-2 mt-10 sm:w-full sm:mt-10">
             <p>Каждый несет в себе уникальный потенциал.</p>
             <p>
               Способности, которые сформировались благодаря неповторимому
@@ -72,8 +72,8 @@ const Home = () => {
         </div>
       </section>
       <section className="px-28 mt-20">
-        <div className="flex flex-row">
-          <div className="flex flex-col align-center gap-9">
+        <div className="flex flex-col  items-center text-center sm:flex-col sm:text-center md:flex-col  md:text-center lg:flex-row">
+          <div className="flex flex-col items-center gap-9">
             <h2 className="text-7xl tracking-wide font-spileCompressed ">
               Подросткам
             </h2>
@@ -81,8 +81,11 @@ const Home = () => {
               Сделать правильный выбор профессии.
             </p>
           </div>
-          <img src={separator} className="mx-10"></img>
-          <div className="flex flex-col align-center gap-9">
+          <img
+            src={separator}
+            className="hidden mx-10 sm:hidden md:hidden lg:block"
+          ></img>
+          <div className="flex flex-col items-center gap-9">
             <h2 className="text-7xl tracking-wide font-spileCompressed ">
               Взрослым
             </h2>
@@ -90,8 +93,11 @@ const Home = () => {
               Прикоснуться к своему потенциалу и поверить в себя.
             </p>
           </div>
-          <img src={separator} className="mx-10"></img>
-          <div className="flex flex-col align-center  gap-9">
+          <img
+            src={separator}
+            className="hidden mx-10 sm:hidden md:hidden lg:block"
+          ></img>
+          <div className="flex flex-col items-center  gap-9">
             <h2 className="text-7xl tracking-wide font-spileCompressed ">
               HR отделу
             </h2>
@@ -102,10 +108,9 @@ const Home = () => {
         </div>
       </section>
 
-
-    <section>
-       <Carousel images={images} />
-    </section>
+      <section className="px-28 mt-20">
+        <Carousel images={images} />
+      </section>
 
       {/* methods */}
       <section className="mt-20">
@@ -125,11 +130,11 @@ const Home = () => {
 
       {/* consultants */}
       <section className="mt-20">
-        <div className="flex gap-16 items-center mb-12">
+        <div className="flex gap-16 items-center mb-12 flex-col md:flex-row">
           <CustomHeader title="консультанты." />
           <p className="text-base">Люди, посвятившие жизнь своему призванию</p>
         </div>
-        <div className="flex lg:flex-row sm:flex-col sm:w-full sm:items-center md:flex-col md:w-full">
+        <div className="flex flex-col lg:flex-row sm:flex-col sm:w-full sm:items-center md:flex-col md:w-full">
           <div className="lg:mr-10">
             {consultants.map((consultant, i) => (
               <ConsultantCard
@@ -166,7 +171,7 @@ const Home = () => {
         <div className="flex flex-col ">
           <div className="flex flex-col lg:flex-row gap-60 mt-10 items-start justify-between">
             <div className="flex flex-row-reverse items-center gap-8">
-              <h2 className="text-8xl tracking-wide font-spileCompressed uppercase">
+              <h2 className="text-3xl tracking-wide font-spileCompressed uppercase sm:text-4xl md:text-5xl lg:text-8xl">
                 тест и персональный отчет
               </h2>
               <div className="w-14 h-14 "></div>
@@ -237,7 +242,7 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className='flex justify-center mt-20 '>
+          <div className="flex justify-center mt-20 ">
             <div className="flex flex-row items-baseline justify-between w-10/12">
               <TransparentButton
                 text="ПЕРЕЙТИ К ОПЛАТЕ"
